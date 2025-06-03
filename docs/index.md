@@ -2,8 +2,31 @@
 
 Este sitio es de documentación personal, aquí se comparten algunos artículos de TI. Inicialmente se publica los que el autor esta utilizando para ciertas certificaciones que intenta pronto rendir.
 
-!!! note "Generación de este sitio"
-    Este sitio esta generado con el SSG MkDocs, y publicado en dominio de GitHub, utilizando Git Page + Git Action.
+!!! note "Generación del este sitio"
+    Este sitio esta generado con SSG MkDocs, utilizando el theme Material, y publicado en dominio de GitHub, utilizando Git Page + Git Action.
+
+## Despliegue inicial de MkDocs
+
+=== "Entorno virtual Python"
+
+    ```bash
+    python -m venv venv
+    source venv/bin/activate
+    ```
+
+=== "Instalación mkdocs-material"
+
+    ```bash
+    pip install mkdocs-material
+    pip freeze | grep -E 'mkdocs|mkdocs-material|markdown' > requirements.txt
+    ```
+
+=== "Ordered list"
+
+    1. First item
+    2. Second item
+    3. Third item
+
 
 ## MkDocs - commands
 
