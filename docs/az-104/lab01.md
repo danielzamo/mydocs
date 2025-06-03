@@ -1,4 +1,6 @@
-# Laboratorio 01
+---
+name: AZ-400 Lab 01
+---
 
 ## Create a new user
 

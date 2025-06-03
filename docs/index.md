@@ -18,15 +18,15 @@ Este sitio es de documentación personal, aquí se comparten algunos artículos 
 
     ```bash
     pip install mkdocs-material
+    # El siguiente comando es ejecutarlo en este momento opcional
     pip freeze | grep -E 'mkdocs|mkdocs-material|markdown' > requirements.txt
     ```
 
-=== "Ordered list"
+=== "Verificación simple/inicial"
 
-    1. First item
-    2. Second item
-    3. Third item
-
+    ```bash
+    mkdocs serve
+    ```
 
 ## MkDocs - commands
 
