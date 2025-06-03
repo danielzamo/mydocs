@@ -44,10 +44,13 @@ markdown_extensions:
       alternate_style: true
   - admonition
   - pymdownx.details
-
+extra_css:
+  - assets/custom.css  # Ruta relativa desde docs/
 extra: 
   social: 
     - icon: simple/youtube
       link: https://youtube.com/
+plugins:
+  - awesome-pages
 
 copyright: Copyright &copy; 2025 Daniel Oscar Zamo
