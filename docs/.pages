@@ -1,0 +1,6 @@
+# docs/.pages
+title: Inicio
+arrange:
+  - index.md
+  - az-104
+  - linux-cli

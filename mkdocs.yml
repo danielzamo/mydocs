@@ -52,7 +52,8 @@ extra:
   social: 
     - icon: simple/youtube
       link: https://youtube.com/
-        #plugins:
-        #  - awesome-pages
+plugins:
+  - search
+  - awesome-pages
 
 copyright: Copyright &copy; 2025 Daniel Oscar Zamo
