@@ -1,5 +1,5 @@
 # docs/.pages
-title: Inicio
+#title: 'Inicio'
 arrange:
   - index.md
   - az-104
