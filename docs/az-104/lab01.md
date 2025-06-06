@@ -1,6 +1,6 @@
-**Lab 01 - Manage Microsoft Entra ID Identities**
+## Lab 01 - Manage Microsoft Entra ID Identities
 
-**Lab introduction**
+### Lab introduction
 
 This is the first in a series of labs for Azure Administrators. In this
 lab, you learn about users and groups. Users and groups are the basic
@@ -12,7 +12,7 @@ region, but the steps are written using **East US**.
 
 **Estimated timing: 30 minutes**
 
-**Lab scenario**
+### Lab scenario
 
 Your organization is building a new lab environment for pre-production
 testing of apps and services. A few engineers are being hired to manage
@@ -22,18 +22,18 @@ tasked with provisioning users and groups. To minimize administrative
 overhead, membership of the groups should be updated automatically based
 on job titles.
 
-**Architecture diagram**
+#### Architecture diagram
 
 ![Diagram of the lab 01
 architecture.](./lab01/media/image1.png)
 
-**Job skills**
+### Job skills
 
 -   Task 1: Create and configure user accounts.
 
 -   Task 2: Create groups and add members.
 
-**Task 1: Create and configure user accounts**
+### Task 1: Create and configure user accounts
 
 In this task, you will create and configure user accounts. User accounts
 will store user data such as name, department, location, and contact
@@ -68,7 +68,7 @@ create more tenants and **Switch** between them.
     the licenses you have, and assign licenses to users and groups.
     Select **Licensed features** to see what is available.
 
-**Create a new user**
+#### Create a new user
 
 1.  Select **Users**, then in the **New user** drop-down select **Create
     new user**.
@@ -121,7 +121,7 @@ create more tenants and **Switch** between them.
 individually. Do you know how your organization plans to create and
 manage user accounts?
 
-**Task 2: Create groups and add members**
+### Task 2: Create groups and add members
 
 In this task, you create a group account. Group accounts can include
 user accounts or devices. These are two basic ways members are assigned
@@ -202,7 +202,7 @@ these prompts.
 -   Provide a comparison table of internal and external Microsoft Entra
     ID user accounts.
 
-**Learn more with self-paced training**
+### Learn more with self-paced training
 
 -   [Understand Microsoft Entra ID](https://learn.microsoft.com/training/modules/understand-azure-active-directory/).
     Compare Microsoft Entra ID to Active Directory DS, learn about
@@ -220,7 +220,7 @@ these prompts.
     organization to reset their passwords or unlock their accounts. Set
     up, configure, and test self-service password reset.
 
-**Key takeaways**
+### Key takeaways
 
 Congratulations on completing the lab. Here are some main takeaways for
 this lab:
