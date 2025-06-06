@@ -77,15 +77,15 @@ create more tenants and **Switch** between them.
     their defaults). On the **Properties** tab notice all the different
     types of information that can be included in the user account.
 
-|Setting| Value|
-|:---| :---|
-|  User principal name|                       az104-user1|
-|  Display name        |                      az104-user1|
-|  Auto-generate password |                   **checked**|
-|  Account enabled         |                  **checked**|
-|  Job title (Properties tab)|                IT Lab Administrator|
-|  Department (Properties tab) |              IT|
-|  Usage location (Properties tab)|           **United States**|
+    |Setting| Value|
+    |:---| :---|
+    |  User principal name|                       az104-user1|
+    |  Display name        |                      az104-user1|
+    |  Auto-generate password |                   **checked**|
+    |  Account enabled         |                  **checked**|
+    |  Job title (Properties tab)|                IT Lab Administrator|
+    |  Department (Properties tab) |              IT|
+    |  Usage location (Properties tab)|           **United States**|
 
 1.  Once you have finished reviewing, select **Review + create** and
     then **Create**.
@@ -96,21 +96,21 @@ create more tenants and **Switch** between them.
 
 1.  In the **New user** drop-down select **Invite an external user**.
 
-|Setting| Value|
-|:---| :---|
-|Email         |            your email address|
-|Display name   |           your name|
-|Send invite message|       **check the box**|
-|Message           |        Welcome to Azure and our group project|
+    |Setting| Value|
+    |:---| :---|
+    |Email         |            your email address|
+    |Display name   |           your name|
+    |Send invite message|       **check the box**|
+    |Message           |        Welcome to Azure and our group project|
 
 2.  Move to the **Properties** tab. Complete the basic information,
     including these fields.
 
-|Setting| Value|
-|:---| :---|
-|Job title|                                 IT Lab Administrator|
-|Department|                                IT|
-|Usage location (Properties tab)|           **United States**|
+    |Setting| Value|
+    |:---| :---|
+    |Job title|                                 IT Lab Administrator|
+    |Department|                                IT|
+    |Usage location (Properties tab)|           **United States**|
 
 1.  Select **Review + invite**, and then **Invite**.
 
@@ -145,12 +145,12 @@ example, job title.
 3.  In the **All groups** blade, select **+ New group** and create a new
     group.
 
-|Setting| Value|
-|:---| :---|
-|  Group type|               **Security**|
-|  Group name |              IT Lab Administrators|
-|  Group description|        Administrators that manage the IT lab|
-|  Membership type   |       **Assigned**|
+    |Setting| Value|
+    |:---| :---|
+    |  Group type|               **Security**|
+    |  Group name |              IT Lab Administrators|
+    |  Group description|        Administrators that manage the IT lab|
+    |  Membership type   |       **Assigned**|
 
 4.  **Note**: An Entra ID Premium P1 or P2 license is required for
     dynamic membership. If other **Membership types** are available, the
