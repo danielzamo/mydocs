@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+    <url>
+         <loc>https://example.com/</loc>
+         <lastmod>2025-06-06</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/az-104/lab01/</loc>
+         <lastmod>2025-06-06</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/az-104/lab02a_implement_mng_grps/</loc>
+         <lastmod>2025-06-06</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/linux-cli/mkv-and-mp4/</loc>
+         <lastmod>2025-06-06</lastmod>
+    </url>
+    <url>
+         <loc>https://example.com/vscode/vscode-tips/</loc>
+         <lastmod>2025-06-06</lastmod>
+    </url>
+</urlset>
