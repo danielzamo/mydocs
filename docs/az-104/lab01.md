@@ -145,9 +145,6 @@ example, job title.
 3.  In the **All groups** blade, select **+ New group** and create a new
     group.
 
-  -----------------------------------------------------------------------
-  **Setting**              **Value**
-  ------------------------ ----------------------------------------------
 |Setting| Value|
 |:---| :---|
 |  Group type|               **Security**|
@@ -159,7 +156,9 @@ example, job title.
     dynamic membership. If other **Membership types** are available, the
     options will show up in the drop-down.
 
-5.  ![Screenshot of create assigned group.](./lab01/media/image2.png)
+5. Screenshot of create assigned group 
+
+![Screenshot of create assigned group.](./lab01/media/image2.png)
 
 6.  Select **No owners selected**.
 
