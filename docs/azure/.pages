@@ -1,0 +1,5 @@
+title: Azure Certifications
+nav:
+  - index.md
+  - "AZ-104 Administrator": az-104
+  - "AZ-900 Fundamentals": az-900

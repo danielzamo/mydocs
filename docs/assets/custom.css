@@ -1,11 +1,16 @@
 /* Simple ocultación de los títulos/sub-títulos */
 
 /* Ocultar header completo */
+
+/*
 .md-header {
     display: none !important;
 }
+    */
 
 /* Ajustar el espacio resultante (opcional) */
+/*
 .md-main {
     padding-top: 0;
 }
+    */

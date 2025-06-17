@@ -1,3 +1,6 @@
+---
+title: AZ-104 - lab01
+---
 ## Lab 01 - Manage Microsoft Entra ID Identities
 
 ### Lab introduction
@@ -25,7 +28,7 @@ on job titles.
 #### Architecture diagram
 
 ![Diagram of the lab 01
-architecture.](./lab01/media/image1.png)
+architecture.](./media/image1.png)
 
 ### Job skills
 
@@ -156,7 +159,7 @@ example, job title.
     dynamic membership. If other **Membership types** are available, the
     options will show up in the drop-down.
 
-5. Screenshot of create assigned group 
+5. Screenshot of create assigned group
 
 ![Screenshot of create assigned group.](./lab01/media/image2.png)
 

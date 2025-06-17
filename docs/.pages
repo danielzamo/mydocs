@@ -1,6 +1,3 @@
-# docs/.pages
-#title: 'Inicio'
-arrange:
+nav:
   - index.md
-  - az-104
-  - linux-cli
+  - Azure: azure
