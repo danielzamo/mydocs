@@ -34,19 +34,19 @@ Your organization has a public website. You need to load balance incoming public
 
 In this task, you will use a template to deploy one virtual network, one network security group, and three virtual machines.
 
-1. Download the `./attachments/task-1/...` lab files (template and parameters).
-1. Sign in to the **Azure portal** - `https://portal.azure.com`.
-1. Search for and select `Deploy a custom template`.
+- Download the `./attachments/task-1/...` lab files (template and parameters).
+- Sign in to the **Azure portal** - `https://portal.azure.com`.
+- Search for and select `Deploy a custom template`.
 
 ![Deploy custom template interface](./images/01-deploy-custom-template.png)
 
-1. On the custom deployment page, select **Build your own template in the editor**.
-1. On the edit template page, select **Load file**.
-1. Locate and select the `./attachments/task-1/az104-06-vms-template.json` file and select **Open**.
-1. Select **Save**.
-1. Select **Edit parameters** and load the `./attachments/task-1/az104-06-vms-parameters.json` file.
-1. Select **Save**.
-1. Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value.
+- On the custom deployment page, select **Build your own template in the editor**.
+- On the edit template page, select **Load file**.
+- Locate and select the `./attachments/task-1/az104-06-vms-template.json` file and select **Open**.
+- Select **Save**.
+- Select **Edit parameters** and load the `./attachments/task-1/az104-06-vms-parameters.json` file.
+- Select **Save**.
+- Use the following information to complete the fields on the custom deployment page, leaving all other fields with the default value.
 
     | Setting       | Value         |
     | ---           | ---           |
@@ -56,7 +56,7 @@ In this task, you will use a template to deploy one virtual network, one network
 
     >**Note**: If you receive an error that the VM size is unavailable, select a SKU that is available in your subscription and has at least 2 cores.
 
-1. Select **Review + Create** and then select **Create**.
+- Select **Review + Create** and then select **Create**.
 
     >**Note**: Wait for the deployment to complete before moving to the next task. The deployment should take approximately 5 minutes.
     >**Note**: Review the resources being deployed. There will be one virtual network with three subnets. Each subnet will have a virtual machine.
@@ -96,11 +96,11 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 ![Diagram of the lab tasks.](./media/az104-lab06-lb-architecture.png)
 
-1. In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
+- In the Azure portal, search for and select `Load balancers` and, on the **Load balancers** blade, click **+ Create**.
 
 ![Load balancer creation interface](./images/01-task2_create-standard-load-balancer.png)
 
-1. Create a load balancer with the following settings (leave others with their default values) then click **Next: Frontend IP configuration**:
+- Create a load balancer with the following settings (leave others with their default values) then click **Next: Frontend IP configuration**:
 
     | Setting | Value |
     | --- | --- |
@@ -114,7 +114,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
      ![Screenshot of the create load balancer page.](./media/az104-lab06-create-lb1.png)
 
-1. On the **Frontend IP configuration** tab, click **Add a frontend IP configuration** and use the following settings:
+- On the **Frontend IP configuration** tab, click **Add a frontend IP configuration** and use the following settings:
 
     | Setting | Value |
     | --- | --- |
@@ -123,7 +123,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
     | Gateway Load Balancer | None |
     | Public IP address | Select **Create new** (use the instructions in the next step) |
 
-1. On the **Add a public IP address** popup, use the following settings before clicking **Save** twice. When completed click **Next: Backend pools**.
+- On the **Add a public IP address** popup, use the following settings before clicking **Save** twice. When completed click **Next: Backend pools**.
 
     | Setting | Value |
     | --- | --- |
@@ -137,7 +137,7 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 ![Frontend IP configuration](./images/04-frontend-ip-config.png)
 
-1. On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **Add** and then **Save**. Click **Next: Inbound rules**.
+- On the **Backend pools** tab, click **Add a backend pool** with the following settings (leave others with their default values). Click **Add** and then **Save**. Click **Next: Inbound rules**.
 
     | Setting | Value |
     | --- | --- |
@@ -150,9 +150,9 @@ In this task, you implement an Azure Load Balancer in front of the two Azure vir
 
 ![Backend pool configuration](./images/05-backend-pool-config.png)
 
-1. As you have time, review the other tabs, then click **Review + create**. Ensure there are no validation errors, then click **Create**.
+- As you have time, review the other tabs, then click **Review + create**. Ensure there are no validation errors, then click **Create**.
 
-1. Wait for the load balancer to deploy then click **Go to resource**.
+- Wait for the load balancer to deploy then click **Go to resource**.
 
 ### Alternative: Create Load Balancer using Azure CLI
 
@@ -191,11 +191,11 @@ az network nic ip-config address-pool add \
 
 **Add a rule to determine how incoming traffic is distributed**
 
-1. In the **Settings** blade, select **Load balancing rules**.
+- In the **Settings** blade, select **Load balancing rules**.
 
 ![Load balancing rules interface](./images/06-load-balancing-rules.png)
 
-1. Select **+ Add**. Add a load balancing rule with the following settings (leave others with their default values).  As you configure the rule use the informational icons to learn about each setting. When finished click **Save**.
+- Select **+ Add**. Add a load balancing rule with the following settings (leave others with their default values).  As you configure the rule use the informational icons to learn about each setting. When finished click **Save**.
 
     | Setting | Value |
     | --- | --- |
@@ -245,13 +245,13 @@ az network lb rule create \
   --probe-name az104-hp
 ```
 
-1. Select **Frontend IP configuration** from the Load Balancer page. Copy the public IP address.
+- Select **Frontend IP configuration** from the Load Balancer page. Copy the public IP address.
 
-1. Open another browser tab and navigate to the IP address. Verify that the browser window displays the message **Hello World from az104-06-vm0** or **Hello World from az104-06-vm1**.
+- Open another browser tab and navigate to the IP address. Verify that the browser window displays the message **Hello World from az104-06-vm0** or **Hello World from az104-06-vm1**.
 
 ![Load balancer testing result](./images/08-load-balancer-test.png)
 
-1. Refresh the window to verify the message changes to the other virtual machine. This demonstrates the load balancer rotating through the virtual machines.
+- Refresh the window to verify the message changes to the other virtual machine. This demonstrates the load balancer rotating through the virtual machines.
 
     > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
@@ -293,15 +293,15 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
 
 ![Diagram of the lab tasks.](./media/az104-lab06-gw-architecture.png)
 
-1. In the Azure portal, search and select `Virtual networks`.
+- In the Azure portal, search and select `Virtual networks`.
 
-1. On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
+- On the **Virtual networks** blade, in the list of virtual networks, click **az104-06-vnet1**.
 
-1. On the **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
+- On the **az104-06-vnet1** virtual network blade, in the **Settings** section, click **Subnets**, and then click **+ Subnet**.
 
 ![Virtual network subnets configuration](./images/09-vnet-subnets.png)
 
-1. Add a subnet with the following settings (leave others with their default values).
+- Add a subnet with the following settings (leave others with their default values).
 
     | Setting | Value |
     | --- | --- |
@@ -309,7 +309,7 @@ In this task, you implement an Azure Application Gateway in front of two Azure v
     | Starting address| `10.60.3.224` |
     | Size | `/27` - Ensure the **starting address** is still **10.60.3.224**|
 
-1. Click **Add**
+- Click **Add**
 
     > **Note**: This subnet will be used by the Azure Application Gateway. The Application Gateway requires a dedicated subnet of /27 or larger size.
 
@@ -331,11 +331,11 @@ az network vnet subnet show \
   --output table
 ```
 
-1. In the Azure portal, search and select `Application gateways` and, on the **Application Gateways** blade, click **+ Create**.
+- In the Azure portal, search and select `Application gateways` and, on the **Application Gateways** blade, click **+ Create**.
 
 ![Application Gateway creation interface](./images/10-create-app-gateway.png)
 
-1. On the **Basics** tab, specify the following settings (leave others with their default values):
+- On the **Basics** tab, specify the following settings (leave others with their default values):
 
     | Setting | Value |
     | --- | --- |
@@ -352,7 +352,7 @@ az network vnet subnet show \
 
 ![Application Gateway basic configuration](./images/11-app-gateway-basics.png)
 
-1. Click **Next: Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**.
+- Click **Next: Frontends >** and specify the following settings (leave others with their default values). When complete, click **OK**.
 
     | Setting | Value |
     | --- | --- |
@@ -365,7 +365,7 @@ az network vnet subnet show \
 
 ![Frontend IP configuration for Application Gateway](./images/12-app-gateway-frontend.png)
 
-1. Click **Next : Backends >** and then **Add a backend pool**. Specify the following settings (leave others with their default values). When completed click **Add**.
+- Click **Next : Backends >** and then **Add a backend pool**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -374,7 +374,7 @@ az network vnet subnet show \
     | Virtual machine | `az104-06-nic1 (10.60.1.4)` |
     | Virtual machine | `az104-06-nic2 (10.60.2.4)` |
 
-1. Click **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
+- Click **Add a backend pool**. This is the backend pool for **images**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -382,7 +382,7 @@ az network vnet subnet show \
     | Add backend pool without targets | `No` |
     | Virtual machine | `az104-06-nic1 (10.60.1.4)` |
 
-1. Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
+- Click **Add a backend pool**. This is the backend pool for **video**. Specify the following settings (leave others with their default values). When completed click **Add**.
 
     | Setting | Value |
     | --- | --- |
@@ -392,7 +392,7 @@ az network vnet subnet show \
 
 ![Backend pools configuration](./images/13-backend-pools.png)
 
-1. Select **Next : Configuration >** and then **Add a routing rule**. Complete the information.
+- Select **Next : Configuration >** and then **Add a routing rule**. Complete the information.
 
     | Setting | Value |
     | --- | --- |
@@ -406,7 +406,7 @@ az network vnet subnet show \
 
 ![Routing rule configuration](./images/14-routing-rule-listener.png)
 
-1. Move to the **Backend targets** tab. Select **Add** after completing the basic information.
+- Move to the **Backend targets** tab. Select **Add** after completing the basic information.
 
    | Setting | Value |
     | --- | --- |
@@ -417,7 +417,7 @@ az network vnet subnet show \
 
 ![Routing rule configuration - backend targets](images/14-routing-rule-listener-backend-targets.png)
 
-1. In the **Path-based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule.
+- In the **Path-based routing** section, select **Add multiple targets to create a path-based rule**. You will create two rules. Click **Add** after the first rule and then **Add** after the second rule.
 
     **Rule - routing to the images backend**
 
@@ -439,9 +439,9 @@ az network vnet subnet show \
 
 ![Path-based routing configuration](./images/15-path-based-routing.png)
 
-1. Be sure to check your changes, then select **Next : Tags >**. No changes are needed.
+- Be sure to check your changes, then select **Next : Tags >**. No changes are needed.
 
-1. Select **Next : Review + create >** and then click **Create**.
+- Select **Next : Review + create >** and then click **Create**.
 
     > **Note**: Wait for the Application Gateway instance to be created. This will take approximately 5-10 minutes. While you wait consider reviewing some of the self-paced training links at the end of this page.
 
@@ -449,13 +449,13 @@ az network vnet subnet show \
 
 ### Test Application Gateway using browser
 
-1. Start browser window and test this URL - `http://\<frontend ip address\>/`.
+- Start browser window and test this URL - `http://\<frontend ip address\>/`.
 
-1. Start another browser window and test this URL - `http://\<frontend ip address\>/image/`.
+- Start another browser window and test this URL - `http://\<frontend ip address\>/image/`.
 
-1. Verify you are directed to the image server (vm1).
+- Verify you are directed to the image server (vm1).
 
-1. Start another browser window and test this URL - `http://\<frontend ip address\>/video/`.
+- Start another browser window and test this URL - `http://\<frontend ip address\>/video/`.
 
 ![Test App. Gateway from browser](images/16-test-app-gateway-from-browser.png)
 
@@ -518,21 +518,21 @@ az network application-gateway url-path-map rule create \
   --http-settings appGatewayBackendHttpSettings
 ```
 
-1. After the application gateway deploys, search for and select **az104-appgw**.
+- After the application gateway deploys, search for and select **az104-appgw**.
 
-1. In the **Application Gateway** resource, in the **Monitoring** section, select **Backend health**.
+- In the **Application Gateway** resource, in the **Monitoring** section, select **Backend health**.
 
-1. Ensure both servers in the backend pool display **Healthy**.
+- Ensure both servers in the backend pool display **Healthy**.
 
-1. On the **Overview** blade, copy the value of the **Frontend public IP address**.
+- On the **Overview** blade, copy the value of the **Frontend public IP address**.
 
-1. Start another browser window and test this URL - `http://<frontend ip address>/image/`.
+- Start another browser window and test this URL - `http://<frontend ip address>/image/`.
 
-1. Verify you are directed to the image server (vm1).
+- Verify you are directed to the image server (vm1).
 
-1. Start another browser window and test this URL - `http://<frontend ip address>/video/`.
+- Start another browser window and test this URL - `http://<frontend ip address>/video/`.
 
-1. Verify you are directed to the video server (vm2).
+- Verify you are directed to the video server (vm2).
 
 > **Note**: You may need to refresh more than once or open a new browser window in InPrivate mode.
 
