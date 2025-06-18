@@ -27,8 +27,7 @@ on job titles.
 
 #### Architecture diagram
 
-![Diagram of the lab 01
-architecture.](./media/image1.png)
+![Diagram of the lab 01 architecture.](media/lab01-architecture.png)
 
 ### Job skills
 
@@ -161,7 +160,7 @@ example, job title.
 
 5. Screenshot of create assigned group
 
-![Screenshot of create assigned group.](./lab01/media/image2.png)
+![Screenshot of create assigned group.](media/lab01-architecture2.png)
 
 6.  Select **No owners selected**.
 
