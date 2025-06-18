@@ -14,13 +14,13 @@ In this lab, you learn how to configure and test a public Load Balancer and an A
 
 This lab requires an Azure subscription. Your subscription type may affect the availability of features in this lab. You may change the region, but the steps are written using **East US**.
 
-## Estimated timing: 50 minutes
+### Estimated timing: 50 minutes
 
-## Lab scenario
+### Lab scenario
 
 Your organization has a public website. You need to load balance incoming public requests across different virtual machines. You also need to provide images and videos from different virtual machines. You plan on implementing an Azure Load Balancer and an Azure Application Gateway. All resources are in the same region.
 
-## Interactive lab simulations
+### Interactive lab simulations
 
 >**Note**: The lab simulations that were previously provided have been retired.
 
