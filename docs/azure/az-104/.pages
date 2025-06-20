@@ -1,6 +1,0 @@
-title: AZ-104 - Administrator 
-nav:
-  - index.md
-  - "Lab 01": lab01.md
-#  - "Lab 06": lab06.md
-  - "Lab06 - Implement Network Traffic Management": lab06.md
