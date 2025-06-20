@@ -1,5 +1,6 @@
 # My excludes
 dz_*
+#dz_drafts
 
 # Dependencies
 node_modules

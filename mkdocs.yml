@@ -1,17 +1,17 @@
 site_name: Material for MkDocs
   #site_url: https://squidfunk.github.io/mkdocs-material/
 site_url: https://danielzamo.github.io/mydocs/
-site_author: Martin Donath
+site_author: Daniel O. Zamo
 site_description: >-
   Write your documentation in Markdown and create a professional static site in
   minutes – searchable, customizable, in 60+ languages, for all devices
 
 # Repository
-repo_name: squidfunk/mkdocs-material
-repo_url: https://github.com/squidfunk/mkdocs-material
+repo_name: danielzamo/mydocs
+repo_url: https://github.com/danielzamo/mydocs
 
 # Copyright
-copyright: Copyright &copy; 2016 - 2025 Martin Donath
+copyright: Copyright &copy; 2016 - 2025 Martin Donath - original
 
 # Configuration
 theme:
@@ -76,8 +76,8 @@ plugins:
   - blog
   - search:
       separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
-        #  - minify:
-        #      minify_html: true
+  - minify:
+      minify_html: true
 
 # Hooks
 hooks:
@@ -162,6 +162,9 @@ not_in_nav: |
 # Page tree
 nav:
   - Home: index.md
+  - Progreso:
+    - Bitácora: progreso/bitacora.md
+    - Tareas Pendientes: progreso/tareas.md
   - Getting started:
     - Installation: getting-started.md
     - Creating your site: creating-your-site.md
