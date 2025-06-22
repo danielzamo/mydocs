@@ -29,4 +29,4 @@ six==1.17.0
 urllib3==2.4.0
 watchdog==6.0.0
 #mkdocs-awesome-pages-plugin==2.10.1
-
+mkdocs-autolinks-plugin==0.7.1
