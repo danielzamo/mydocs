@@ -8,9 +8,11 @@ This file was automatically generated - do not edit
 
 {#- --- INICIO DE LA MODIFICACIÓN CORRECTA --- -#}
 {%- block announce -%}
-  {%- if config.extra.show_announcement and config.extra.announcement_text -%}
-    {{ config.extra.announcement_text | markdown }}
-  {%- endif -%}
+{#- Comprobamos el flag DENTRO del bloque que estamos sobrescribiendo -#}
+{%- if config.extra.show_announcement -%}
+  Este sitio esta en desarrollo, aunque publicado
+{%- endif -%}
+
 {%- endblock -%}
 {#- --- FIN DE LA MODIFICACIÓN CORRECTA --- -#}
 

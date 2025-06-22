@@ -1,6 +1,7 @@
 # My excludes
 dz_*
 zz-legacy/
+*.docx
 
 # Dependencies
 node_modules

@@ -81,7 +81,6 @@ plugins:
 
 # Hooks
 hooks:
-  - material/overrides/hooks/main.py
   - material/overrides/hooks/shortcodes.py
   - material/overrides/hooks/translations.py
 
@@ -114,11 +113,11 @@ extra:
 
   # FLAG PERSONALIZADO
   # Ponlo en 'true' para mostrar la barra, 'false' para ocultarla.
-  show_announcement: true
+  show_announcement: false
   # El texto que se mostrará en la barra (announcement).
   # Se puede usar Markdown aquí para darle estilo (negrita, enlaces, etc.).
   #dz>  announcement_text: "**Atención:** Este sitio está en desarrollo, aunque ya publicado. <a href='/tareas-pendientes/'>Ver tareas pendientes</a>."
-  announcement_text: "**Atención:** Este sitio está en versión beta. <a href='/tareas-pendientes/'>Ver tareas pendientes</a>."
+  announcement_text: "hola desde docks.yml"
 # Extensions
 markdown_extensions:
   - abbr
@@ -180,7 +179,7 @@ nav:
     - Tareas Pendientes: progreso/tareas.md
   - Azure:
     - Laboratorios:
-      - Lab 07 from cli: azure/laboratories/lab07-cli.md
+      - Lab07: azure/laboratories/lab07.md
   - Getting started:
     - Installation: getting-started.md
     - Creating your site: creating-your-site.md
