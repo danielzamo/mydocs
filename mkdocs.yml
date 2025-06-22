@@ -95,8 +95,8 @@ extra:
   status:
     new: Recently added
     deprecated: Deprecated
-  show_announcement: true
-  announcement_text: "**Atención:** Este sitio está en versión beta. <a href='/tareas-pendientes/'>Ver tareas pendientes</a>."
+  show_announcement: false 
+  announcement_text: "**Atención:** Este sitio está en versión beta." # <a href='/tareas-pendientes/'>Ver tareas pendientes</a>."
 
 # Extensions
 markdown_extensions:
