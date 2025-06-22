@@ -1,8 +1,9 @@
 # My excludes
 dz_drafts
-!dz_drafts/1_Projects/*/docs
+!dz_drafts/1_Projects/*/docs/
 zz-legacy/
 *.docx
+_docs_legacy/
 
 # Dependencies
 node_modules
@@ -17,6 +18,7 @@ site
 # Distribution files
 dist
 mkdocs_material.egg-info
+20*mkdocs.yml.v*
 
 # Caches and logs
 *.cpuprofile

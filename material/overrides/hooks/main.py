@@ -28,3 +28,32 @@ def on_env(env, config, files):
     if _md:
         env.filters['markdown'] = _md.convert
     return env
+
+def on_page_markdown(markdown, page, config, files):
+    """
+    Reemplaza marcadores como ::pages con una lista de archivos.
+    """
+    import os
+
+    # Si no hay '::pages' en la página, no hacemos nada
+    if '::pages' not in markdown:
+        return markdown
+
+    # Obtenemos la ruta del directorio de la página actual
+    page_dir = os.path.dirname(page.file.src_path)
+
+    # Generamos la lista de enlaces
+    links = []
+    for file in sorted(os.listdir(os.path.join(config['docs_dir'], page_dir))):
+        if file.endswith('.md') and file != 'index.md':
+            # Obtenemos el título de la página del 'frontmatter' si existe
+            title = file.replace('.md', '') # Título por defecto
+
+            # Enlace en formato Markdown
+            links.append(f"- [{title}]({file})")
+
+    # Unimos los enlaces en una lista de Markdown
+    link_list = "\n".join(links)
+
+    # Reemplazamos '::pages' con nuestra lista generada
+    return markdown.replace('::pages', link_list)
