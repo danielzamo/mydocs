@@ -1,7 +1,0 @@
-# docs/.pages
-#title: Home
-nav:
-  - Home: index.md  # El título 'Home' lo toma del 'title' de arriba.
-  - Progreso: ...
-  - Azure: ...
-  - Blog: blog/index.md 

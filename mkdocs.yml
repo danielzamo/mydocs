@@ -25,8 +25,8 @@ theme:
     
     # --- OTRAS FEATURES ÚTILES QUE TENÍAS ---
     - announce.dismiss
-    - content.action.edit
-    - content.action.view
+#    - content.action.edit
+#    - content.action.view
     - content.code.annotate
     - content.code.copy
     - navigation.footer
@@ -38,7 +38,7 @@ theme:
     - search.suggest
     - toc.follow
       # - toc.integrate # Desactivado para que la tabla de contenidos vuelva a la derecha.
-    - toc.integrate      # Elimina la tabla de contenidos de la
+#    - toc.integrate      # Elimina la tabla de contenidos de la
                          ## derecha. La barra lateral derecha
                          ## desaparecerá; Mueve la tabla de contenidos
                          ## a la barra de navegación de la izquierda.
