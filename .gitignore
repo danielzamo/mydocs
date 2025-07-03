@@ -1,51 +1,62 @@
-# My excludes
-dz_drafts
-!dz_drafts/1_Projects/*/docs/
+# ===================================================================
+# Archivos y directorios generados por MkDocs
+# ===================================================================
+# La carpeta 'site' contiene el sitio web estático generado.
+# Nunca debe subirse al repositorio, ya que se genera automáticamente.
+site/
+
+# Fichero de backup que a veces crea MkDocs.
+mkdocs.yml.bak
+
+# ===================================================================
+# Python y Entorno Virtual
+# ===================================================================
+# El entorno virtual completo. Es pesado, específico de tu OS y
+# sus dependencias se gestionan con un fichero requirements.txt.
+venv/
+
+# Caché de Python y archivos compilados.
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Archivos de instalación de paquetes.
+*.egg-info/
+*.egg
+
+# Ficheros de variables de entorno (suelen contener secretos).
+.env
+.env.*
+!/.env.example
+
+# ===================================================================
+# Directorios personalizados del usuario
+# ===================================================================
+# Tus carpetas de trabajo que no deben formar parte de la publicación final.
 zz-legacy/
-*.docx
-_docs_legacy/
+dz_drafts/
 
-# Dependencies
-node_modules
-__pycache__
-venv
-.venv
+# ===================================================================
+# Configuración del Editor de Código / IDE (VSCode)
+# ===================================================================
+# Ignora la configuración local y de workspace de Visual Studio Code.
+.vscode/
 
-# Build files
-build
-site
-
-# Distribution files
-dist
-mkdocs_material.egg-info
-20*mkdocs.yml.v*
-
-# Caches and logs
-*.cpuprofile
-*.log
-*.tsbuildinfo
-.cache
-.eslintcache
-__pycache__
-
-# Examples
-example
-example.zip
-
-# -----------------------------------------------------------------------------
-# General
-# -----------------------------------------------------------------------------
-
-# Never ignore .gitkeep files
-!**/.gitkeep
-
-# macOS internals
+# ===================================================================
+# Archivos del Sistema Operativo
+# ===================================================================
+# Ignorar archivos generados automáticamente por macOS, Windows y Linux.
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
 
-# Temporary files
-TODO
-tmp
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
 
-# IDEs & Editors
-.idea
+# Linux
 *~
+.directory

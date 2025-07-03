@@ -1,55 +1,43 @@
-site_name: myDocs
-site_url: https://danielzamo.github.io/mydocs/
-site_author: Daniel O. Zamo
-site_description: >-
-  Write your documentation in Markdown and create a professional static site in
-  minutes – searchable, customizable, in 60+ languages, for all devices
+# Project information
+site_name: mydocs
 
+site_url: https://danielzamo.github.io/mydocs/
+
+site_author: Daniel Oscar Zamo
+
+site_description: >-
+  Sitio de uso personal, para documentación de notas y/o apuntes de proyectos. 
+  Este sitio de contenido estático esta generado por Mkdocs usando el theme Material.
+  La documentación esta escrita en su totalidad sobre ficheros Markdown.
+  
 # Repository
 repo_name: danielzamo/mydocs
 repo_url: https://github.com/danielzamo/mydocs
 
 # Copyright
-copyright: Copyright © 2016 - 2025 Martin Donath - original
+copyright: Theme Material - original &copy; 2016 - 2025 Martin Donath
 
 # Configuration
 theme:
   name: material
-  custom_dir: material/overrides
+  custom_dir: my_theme/overrides
   features:
-    # --- AJUSTES DE NAVEGACIÓN ---
-    # Activa las pestañas en el header. Esto nos dará el menú "Home", "Azure", etc., arriba.
-    - navigation.tabs
-    # Evita que el menú de la izquierda se oculte al hacer scroll. Mantiene todas las secciones visibles.
-    - navigation.expand
-    
-    # --- OTRAS FEATURES ÚTILES QUE TENÍAS ---
-    - announce.dismiss
+#    - announce.dismiss
 #    - content.action.edit
 #    - content.action.view
     - content.code.annotate
     - content.code.copy
+    - content.tooltips
     - navigation.footer
     - navigation.indexes
+    - navigation.sections
+    - navigation.tabs
     - navigation.top
     - navigation.tracking
     - search.highlight
     - search.share
     - search.suggest
     - toc.follow
-      # - toc.integrate # Desactivado para que la tabla de contenidos vuelva a la derecha.
-#    - toc.integrate      # Elimina la tabla de contenidos de la
-                         ## derecha. La barra lateral derecha
-                         ## desaparecerá; Mueve la tabla de contenidos
-                         ## a la barra de navegación de la izquierda.
-                         ## Ahora, debajo del enlace de la página
-                         ## activa, aparecerán todos sus encabezados
-                         ## (H1, H2, H3...). ## ¡Estos encabezados
-                         ## serán contraíbles/expandibles! Por defecto,
-                         ## verás los de nivel superior, y se irán
-                         ## expandiendo a medida que te desplaces por
-                         ## la página o hagas clic en ellos.
-
   palette:
     - media: "(prefers-color-scheme)"
       toggle:
@@ -76,29 +64,38 @@ theme:
   icon:
     logo: logo
 
-# Plugins
 plugins:
-  - search
   - blog
-  - minify
-  # autolinks sigue generando la navegación, pero ahora respetará las pestañas
-  - autolinks
+  - search:
+      separator: '[\s\u200b\-_,:!=\[\]()"`/]+|\.(?!\d)|&[lg]t;|(?!\b)(?=[A-Z][a-z])'
+  - minify:
+      minify_html: true
 
-# Hooks
-hooks:
-  - material/overrides/hooks/main.py
-  #  - material/overrides/hooks/shortcodes.py # Mantenemos desactivado para evitar errores
-  - material/overrides/hooks/translations.py
+        #hooks:
+        #  - material/overrides/hooks/shortcodes.py
+        #  - material/overrides/hooks/translations.py
 
-# Additional configuration
 extra:
   status:
     new: Recently added
     deprecated: Deprecated
-  show_announcement: false 
-  announcement_text: "**Atención:** Este sitio está en versión beta." # <a href='/tareas-pendientes/'>Ver tareas pendientes</a>."
+#  analytics:
+#    provider: google
+#    property: !ENV GOOGLE_ANALYTICS_KEY
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/danielzamo
 
-# Extensions
+  announce:
+    # La siguiente línea permite que el usuario cierre la barra.
+    # El texto que pongas será el tooltip del botón 'x'.
+    dismiss: "Cerrar este anuncio"
+    # Este es el contenido de tu barra
+    title: "¡Bienvenido a mydocs!"
+    text: > # El > permite escribir en múltiples líneas
+      Este es mi nuevo sitio de documentación personal. 
+      Explora la sección de <a href="/azure/">Azure</a>.
+
 markdown_extensions:
   - abbr
   - admonition
@@ -108,8 +105,6 @@ markdown_extensions:
   - md_in_html
   - toc:
       permalink: true
-      toc_depth: "2"
-  # ... (el resto de tus extensiones pymdownx no necesitan cambios)
   - pymdownx.arithmatex:
       generic: true
   - pymdownx.betterem:
@@ -132,9 +127,9 @@ markdown_extensions:
       repo: mkdocs-material
   - pymdownx.mark
   - pymdownx.smartsymbols
-  - pymdownx.snippets:
-      auto_append:
-        - includes/mkdocs.md
+#  - pymdownx.snippets:
+#      auto_append:
+#        - includes/mkdocs.md
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
@@ -150,8 +145,127 @@ markdown_extensions:
       custom_checkbox: true
   - pymdownx.tilde
 
-extra_css:
-  - stylesheets/extra.css
+not_in_nav: |
+  /tutorials/**/*.md
 
-# La sección 'nav' manual debe permanecer comentada o eliminada,
-# ya que 'autolinks' se encarga de ello.
+nav:
+  - Home: index.md
+  - Azure:
+    - azure/index.md
+    - AZ-104 laboratorios:
+      - azure/az-104-laboratories/index.md 
+        #  - Getting started:
+        #    - Installation: getting-started.md
+        #    - Creating your site: creating-your-site.md
+        #    - Publishing your site: publishing-your-site.md
+        #    - Customization: customization.md
+        #    - Conventions: conventions.md
+        #    - Browser support: browser-support.md
+        #    - Enterprise feedback: enterprise-support.md
+        #    - Philosophy: philosophy.md
+        #    - Alternatives: alternatives.md
+        #    - License: license.md
+        #    - Tutorials:
+        #      - tutorials/index.md
+        #      - "Blogs":
+        #        - tutorials/blogs/basic.md
+        #        - tutorials/blogs/navigation.md
+        #        - tutorials/blogs/engage.md
+        #      - "Social cards":
+        #        - tutorials/social/basic.md
+        #        - tutorials/social/custom.md
+        #    - Changelog:
+        #      - changelog/index.md
+        #      - How to upgrade: upgrade.md
+        #  - Setup:
+        #    - setup/index.md
+        #    - Changing the colors: setup/changing-the-colors.md
+        #    - Changing the fonts: setup/changing-the-fonts.md
+        #    - Changing the language: setup/changing-the-language.md
+        #    - Changing the logo and icons: setup/changing-the-logo-and-icons.md
+        #    - Ensuring data privacy: setup/ensuring-data-privacy.md
+        #    - Setting up navigation: setup/setting-up-navigation.md
+        #    - Setting up site search: setup/setting-up-site-search.md
+        #    - Setting up site analytics: setup/setting-up-site-analytics.md
+        #    - Setting up social cards: setup/setting-up-social-cards.md
+        #    - Setting up a blog: setup/setting-up-a-blog.md
+        #    - Setting up tags: setup/setting-up-tags.md
+        #    - Setting up versioning: setup/setting-up-versioning.md
+        #    - Setting up the header: setup/setting-up-the-header.md
+        #    - Setting up the footer: setup/setting-up-the-footer.md
+        #    - Adding a git repository: setup/adding-a-git-repository.md
+        #    - Adding a comment system: setup/adding-a-comment-system.md
+        #    - Building an optimized site: setup/building-an-optimized-site.md
+        #    - Building for offline usage: setup/building-for-offline-usage.md
+        #    - Extensions:
+        #      - setup/extensions/index.md
+        #      - Python Markdown: setup/extensions/python-markdown.md
+        #      - Python Markdown Extensions: setup/extensions/python-markdown-extensions.md
+        #  - Plugins:
+        #    - plugins/index.md
+        #    - Blog: plugins/blog.md
+        #    - Group: plugins/group.md
+        #    - Info: plugins/info.md
+        #    - Meta: plugins/meta.md
+        #    - Offline: plugins/offline.md
+        #    - Optimize: plugins/optimize.md
+        #    - Privacy: plugins/privacy.md
+        #    - Projects: plugins/projects.md
+        #    - Search: plugins/search.md
+        #    - Social: plugins/social.md
+        #    - Tags: plugins/tags.md
+        #    - Typeset: plugins/typeset.md
+        #    - Requirements:
+        #      - Image processing: plugins/requirements/image-processing.md
+        #      - Caching: plugins/requirements/caching.md
+        #  - Reference:
+        #    - reference/index.md
+        #    - Admonitions: reference/admonitions.md
+        #    - Annotations: reference/annotations.md
+        #    - Buttons: reference/buttons.md
+        #    - Code blocks: reference/code-blocks.md
+        #    - Content tabs: reference/content-tabs.md
+        #    - Data tables: reference/data-tables.md
+        #    - Diagrams: reference/diagrams.md
+        #    - Footnotes: reference/footnotes.md
+        #    - Formatting: reference/formatting.md
+        #    - Grids: reference/grids.md
+        #    - Icons, Emojis: reference/icons-emojis.md
+        #    - Images: reference/images.md
+        #    - Lists: reference/lists.md
+        #    - Math: reference/math.md
+        #    - Tooltips: reference/tooltips.md
+        #  - Insiders:
+        #    - insiders/index.md
+        #    - Why sponsor us: insiders/why-sponsor-us.md
+        #    - What's in it for you: insiders/benefits.md
+        #    - Who is sponsoring: insiders/our-sponsors.md
+        #    - Sponsoring tiers: insiders/sponsoring-tiers.md
+        #    - How to sponsor: insiders/how-to-sponsor.md
+        #    - Additional information:
+        #      - Payment and billing: insiders/payment-and-billing.md
+        #      - Access management: insiders/access-management.md
+        #      - Runtime and cancellation: insiders/runtime-and-cancellation.md
+        #      - Privacy: insiders/privacy.md
+        #      - License: insiders/license.md
+        #      - Support: support.md
+        #    - Using Insiders:
+        #      - Getting started: insiders/getting-started.md
+        #    - Changelog:
+        #      - insiders/changelog/index.md
+        #      - How to upgrade: insiders/upgrade.md
+        #  - Community:
+        #    - Contributing:
+        #      - contributing/index.md
+        #      - Reporting a bug: contributing/reporting-a-bug.md
+        #      - Reporting a docs issue: contributing/reporting-a-docs-issue.md
+        #      - Requesting a change: contributing/requesting-a-change.md
+        #      - Adding translations: contributing/adding-translations.md
+        #      - Making a pull request: contributing/making-a-pull-request.md
+        #      - Asking a question: https://github.com/squidfunk/mkdocs-material/discussions
+        #    - Guides:
+        #      - Creating a reproduction: guides/creating-a-reproduction.md
+        #    - Community experts program:
+        #      - insiders/community-experts-program/index.md
+        #  - Blog:
+        #    - blog/index.md

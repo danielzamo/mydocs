@@ -1,8 +1,0 @@
-/*
- * Ocultar la barra de anuncios por completo si no tiene contenido.
- * Esto soluciona el problema de que 'announce.dismiss' muestre una barra vacía.
- */
-
-.md-banner:has(> .md-banner__inner:empty) {
-  display: none;
-}
